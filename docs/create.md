@@ -52,7 +52,7 @@ Once you click on Create button, you should see your cluster up and running as b
 
 ## Connect to Your Database
 
-You can connect to your database with any Redis client. For simplicity, we will use `redis-cli` tool in this guide but please refer to Connect Your Client section for more about connecting via Redis clients.
+You can connect to your database with any Redis client. For simplicity, we will use `redis-cli` tool in this guide but please refer to [Connect Your Client](./connect-your-client.mdx) section for more about connecting via Redis clients.
 
 `redis-cli` comes packaged with the official Redis distribution. If you do not have Redis installed, you can get it as described at [Redis Quick Start](https://redis.io/docs/getting-started/) document. Now, you can connect to and run commands on your database as below:
 

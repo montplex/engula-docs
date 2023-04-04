@@ -124,17 +124,17 @@ const config = {
             title: "Discover",
             items: [
               {
-                label: "About me",
+                label: "About",
                 to: "/",
               },
-              {
-                label: "Projects",
-                to: "/projects",
-              },
-              {
-                label: "Talks",
-                to: "/talks",
-              },
+              // {
+              //   label: "Projects",
+              //   to: "/projects",
+              // },
+              // {
+              //   label: "Talks",
+              //   to: "/talks",
+              // },
             ],
           },
         ],
