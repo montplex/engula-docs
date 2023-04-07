@@ -31,7 +31,10 @@ const config = {
       serviceName: "Mailchimp",
     },
   }, */
-
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
   /* i18n: {
     defaultLocale: "en",
     locales: ["zh-Hans", "en"],

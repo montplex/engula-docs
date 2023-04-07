@@ -14,7 +14,11 @@ export const Banner: FunctionComponent = () => {
         </div>
 
         <div className={styles.start}>
-          <a className={styles.wBtn} href={location.origin} target="_blank">
+          <a
+            className={styles.wBtn}
+            href="https://dev.montplex.com"
+            target="_blank"
+          >
             GET STATRED
           </a>
         </div>
