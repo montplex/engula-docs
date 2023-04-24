@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Overall": {
+    "message": "起步",
+    "description": "The label for category Overall in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.How To": {
+    "message": "指南",
+    "description": "The label for category How To in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Support": {
+    "message": "服务和支持",
+    "description": "The label for category How To in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.How To.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category How To in sidebar tutorialSidebar"
+  }
+}
