@@ -44,7 +44,7 @@ sidebar_position: 1
 
 ![Cache Service](/docs/show.png)
 
-## 连接到您的数据库
+## 连接到您的客户端
 
 您可以使用任何 Redis 客户端连接到您的数据库。下面是使用“redis cli”连接的简单示例，更多通过 redis 客户端进行连接的信息，请参考 [连接客户端](../howto/connect-your-client.mdx)。
 

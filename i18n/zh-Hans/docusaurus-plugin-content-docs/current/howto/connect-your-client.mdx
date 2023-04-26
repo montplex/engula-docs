@@ -6,37 +6,39 @@ sidebar_position: 1
 
 Montplex 可以将任何 Redis 客户端与 Montplex 配合使用。在 Redis 客户端页面，您可以找到不同语言的 Redis 客户端列表。
 
-连接到数据库的最简单方法可能是使用 redis-cli。因为它已经在入门中介绍过了，这里我们直接跳过。
+连接到数据库的最简单方法可能是使用 redis-cli。因为它已经在前面中介绍过了，这里我们直接跳过。
 
-## 数据库
-
-完成 [开始使用](../overall/create.md)指南后，您将看到如下数据库页面：
+完成 [开始使用](../overall/create.md) 指南后，您将看到如下数据库页面：
 
 ![database](/docs/show.png)
 
 Redis 客户端所需的信息在此处显示为**地址**、**端口**和**密码**。在客户端里，当您单击“连接”按钮时，您可以复制客户端所需的代码。
 
+## 连接
+
 下面我们将给出主流 Redis 客户端的示例，但以上信息应该有助于您以类似方式配置所有 Redis 客户端。
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
-<Tabs>
-<TabItem value="js" label="Redis Cli">
+### Redis Cli
 
 ```js
-redis-cli -u redis://default:YOUR_PASSWORD@YOUR_ENDPOINT:YOUR_PORT
+redis-cli -h YOUR_ENDPOINT -p YOUR_PORT -a YOUR_PASSWORD
 ```
 
-</TabItem>
-<TabItem value="node" label="Node.js">
+### Node.js
 
 Library [ioredis](https://github.com/luin/ioredis)
 
 ```js
-const Redis = require('ioredis')
-let client = new Redis('redis://default:YOUR_PASSWORD@YOUR_ENDPOINT:YOUR_PORT')
-client.set('foo', 'bar')
+const Redis = require('ioredis');
+
+let client = new Redis({
+	port: "YOUR_PORT"
+  host: "YOUR_ENDPOINT",
+  password: "YOUR_PASSWORD"
+});
+
+client.set('foo', 'bar');
+
 ```
 
 Library [node-redis](https://github.com/redis/node-redis)
@@ -56,8 +58,7 @@ client.on('error', function (err) {
 client.set('foo', 'bar')
 ```
 
-</TabItem>
-<TabItem value="php" label="PHP">
+### PHP
 
 Library [predis](https://github.com/predis/predis)
 
@@ -65,7 +66,7 @@ Library [predis](https://github.com/predis/predis)
 $client = new PredisClient(
   [
     'host'   => 'YOUR_ENDPOINT',
-    'password' => YOUR_PASSWORD,
+    'password' => 'YOUR_PASSWORD',
     'port'   => 'YOUR_PORT',
     'scheme' => tcp,
   ]
@@ -85,8 +86,7 @@ $redis->set("foo", "bar");
 print_r($redis->get("foo"));
 ```
 
-</TabItem>
-<TabItem value="py" label="Python">
+### Python
 
 Library [redis-py](https://github.com/redis/redis-py)
 
@@ -102,8 +102,7 @@ r.set('foo','bar')
 print(r.get('foo'))
 ```
 
-</TabItem>
-<TabItem value="java" label="Java">
+### Java
 
 Library [jedis](https://github.com/redis/jedis)
 
@@ -116,8 +115,7 @@ public static void main(String[] args) {
 }
 ```
 
-</TabItem>
-<TabItem value="go" label="Go">
+### Go
 
 Library [go-redis](https://github.com/redis/go-redis)
 
@@ -125,12 +123,18 @@ Library [go-redis](https://github.com/redis/go-redis)
 var ctx = context.Background()
 
 func main() {
-  opt, _ := redis.ParseURL("redis://default:YOUR_PASSWORD@YOUR_ENDPOINT:YOUR_PORT")
+
+   opt := redis.NewClient(&redis.Options{
+		Addr:	  "YOUR_ENDPOINT:YOUR_PORT",
+		Password: "YOUR_PASSWORD"
+	})
+
   client := redis.NewClient(opt)
 
   client.Set(ctx, "foo", "bar", 0)
   val := client.Get(ctx, "foo").Val()
   print(val)
+
 }
 ```
 
@@ -155,12 +159,8 @@ func main() {
 }
 ```
 
-</TabItem>
-<TabItem value="docker" label="Docker">
+### Docker
 
 ```js
-docker run -it redis:alpine redis-cli -u redis://default:YOUR_PASSWORD@YOUR_ENDPOINT:YOUR_PORT
+docker run -it redis:alpine redis-cli -h YOUR_ENDPOINT -p YOUR_PORT -a YOUR_PASSWORD
 ```
-
-</TabItem>
-</Tabs>
