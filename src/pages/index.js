@@ -7,5 +7,5 @@ export default function Home() {
 	useEffect(() => {
 		setLang(document.documentElement.lang)
 	})
-	return <Redirect to={lang == 'zh-Hans' ? '/zh-Hans/docs/overall/create' : '/docs/overall/create'} />
+	return <Redirect to={lang == 'zh-Hans' ? '/docs/zh-Hans/docs/overall/create' : '/docs/docs/overall/create'} />
 }

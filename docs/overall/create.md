@@ -24,15 +24,15 @@ We do not access your information other than:
 
 Once you logged in, you can create a database by clicking on the plus sign at the top right corner.
 
-![Cache Service](/docs/create.png)
+![CacheService](/docs/create.png)
 
 Fill in basic information and create a cache.
 
-![Cache Service](/docs/create-03.png)
+![CacheService](/docs/create-03.png)
 
 After successful creation, a cache data will be added to the list.
 
-![Cache Service](/docs/create-04.png)
+![CacheService](/docs/create-04.png)
 
 **Database Name**: Type a name for your database.
 
@@ -41,7 +41,7 @@ Region: Select the region where your database will run. For best performance, ch
 
 Once you click on Create button, you should see your cluster up and running as below:
 
-![Cache Service](/docs/show.png)
+![CacheService](/docs/show.png)
 
 ## Connect to Your Database
 

@@ -43,55 +43,53 @@ const config = {
 		],
 	],
 
-	themeConfig:
-		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-		({
-			// Replace with your project's social card
-			image: 'img/docusaurus-social-card.jpg',
-			navbar: {
-				hideOnScroll: false,
-				title: 'Montplex',
-				logo: {
-					alt: 'Montplex',
-					src: 'img/logo.svg',
+	themeConfig: {
+		// Replace with your project's social card
+		image: 'img/docusaurus-social-card.jpg',
+		navbar: {
+			hideOnScroll: false,
+			title: 'Montplex',
+			logo: {
+				alt: 'Montplex',
+				src: 'img/logo.svg',
+			},
+			items: [
+				{
+					type: 'docSidebar',
+					sidebarId: 'tutorialSidebar',
+					position: 'left',
+					label: 'Docs',
 				},
-				items: [
-					{
-						type: 'docSidebar',
-						sidebarId: 'tutorialSidebar',
-						position: 'left',
-						label: 'Docs',
-					},
-					{ to: '/blog', label: 'Blog', position: 'left' },
-					{ to: 'docs/support/contact-us', label: 'Contact Us', position: 'left' },
-					{
-						href: 'https://dev.montplex.com/',
-						label: 'Console',
-						position: 'right',
-					},
-					{
-						type: 'localeDropdown',
-						position: 'right',
-					},
-				],
-			},
-			colorMode: {
-				defaultMode: 'dark',
-				disableSwitch: false,
-				respectPrefersColorScheme: true,
-			},
-			prism: {
-				theme: lightCodeTheme,
-				darkTheme: darkCodeTheme,
-			},
-			// 设置侧边栏可折叠
-			docs: {
-				sidebar: {
-					hideable: true,
-					autoCollapseCategories: true,
+				{ to: '/blog', label: 'Blog', position: 'left' },
+				{ to: 'docs/support/contact-us', label: 'Contact Us', position: 'left' },
+				{
+					href: 'https://dev.montplex.com/',
+					label: 'Console',
+					position: 'right',
 				},
+				{
+					type: 'localeDropdown',
+					position: 'right',
+				},
+			],
+		},
+		colorMode: {
+			defaultMode: 'light',
+			disableSwitch: false,
+			respectPrefersColorScheme: true,
+		},
+		prism: {
+			theme: lightCodeTheme,
+			darkTheme: darkCodeTheme,
+		},
+		// 设置侧边栏可折叠
+		docs: {
+			sidebar: {
+				hideable: true,
+				autoCollapseCategories: true,
 			},
-		}),
+		},
+	},
 }
 
 module.exports = config
