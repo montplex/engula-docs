@@ -23,4 +23,4 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - **[Go-Redis](https://github.com/go-redis/redis)** [Command Tests](https://github.com/go-redis/redis/blob/master/commands_test.go)
 - **[Redis-py](https://github.com/redis/redis-py)** [Command Tests](https://github.com/redis/redis-py/tree/v4.4.0/tests)
 
-对于大多数不受支持的命令,都在我们的开发计划中。如果您需要我们不支持的功能，请留言至 [support@montplex.com ](support@montplex.com),已便在计划支持时及时通知您。
+对于大多数不受支持的命令,都在我们的开发计划中。如果您需要我们不支持的功能，请留言至 support@montplex.com,已便在计划支持时及时通知您。
