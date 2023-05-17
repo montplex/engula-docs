@@ -8,7 +8,7 @@ This page describes the steps on how to create a database on the [Montplex](http
 
 ## Create Account
 
-You can sign up to [Montplex](https://dev.montplex.com) using your Amazon, Github or Google accounts. Alternatively you can sign up using email/password registration if you don't want to use these auth providers, or you want to sign up using a corporate email address.
+You can sign up to [Montplex](https://dev.montplex.com) using your Github or Google accounts. Alternatively you can sign up using email/password registration if you don't want to use these auth providers, or you want to sign up using a corporate email address.
 
 :::note
 

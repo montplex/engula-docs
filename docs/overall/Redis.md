@@ -6,14 +6,153 @@ sidebar_position: 3
 
 Montplex supports Redis client protocol up to version `6.2`. Following table shows the list of supported Redis commands:
 
-| Feature                                                   | Supported? | Supported Commands                                                                                                                                                                                                                                                                                                                                          |
-| --------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [String](https://redis.io/commands/?group=string)         | ✅         | APPEND - DECR - DECRBY - GET - GETBIT - GETDEL - GETEX - GETRANGE - GETSET - INCR - INCRBY - INCRBYFLOAT - MGET - MSET - MSETNX - PSETEX - SET - SETBIT - SETEX - SETNX - SETRANGE - STRLEN                                                                                                                                                                 |
-| [Bitmap](https://redis.io/commands/?group=bitmap)         | ✅         | BITCOUNT - BITFIELD - BITFIELD_RO - BITPOS                                                                                                                                                                                                                                                                                                                  |
-| [Hash](https://redis.io/commands/?group=hash)             | ✅         | HDEL - HEXISTS - HGET - HGETALL - HINCRBY - HINCRBYFLOAT - HKEYS - HLEN - HMGET - HMSET - HSCAN - HSET - HSETNX - HSTRLEN - HRANDFIELD - HVALS                                                                                                                                                                                                              |
-| [List](https://redis.io/commands/?group=list)             | ✅         | BLMOVE - BLPOP - BRPOP - BRPOPLPUSH - LINDEX - LINSERT - LLEN - LMOVE - LPOP - LPOS - LPUSH - LPUSHX - LRANGE - LREM - LSET - LTRIM - RPOP - RPOPLPUSH - RPUSH - RPUSHX                                                                                                                                                                                     |
-| [Set](https://redis.io/commands/?group=set)               | ✅         | SADD - SCARD - SDIFF - SDIFFSTORE - SINTER - SINTERSTORE - SISMEMBER - SMEMBERS - SMISMEMBER - SMOVE - SPOP - SRANDMEMBER - SREM - SSCAN - SUNION - SUNIONSTORE                                                                                                                                                                                             |
-| [Sorted Set](https://redis.io/commands/?group=sorted_set) | ✅         | BZPOPMAX - BZPOPMIN - ZADD - ZCARD - ZCOUNT - ZDIFFSTORE - ZINCRBY - ZINTERSTORE - ZLEXCOUNT - ZMSCORE - ZPOPMAX - ZPOPMIN - ZRANDMEMBER - ZRANGE - ZRANGESTORE - ZRANGEBYLEX - ZRANGEBYSCORE - ZRANK - ZREM - ZREMRANGEBYLEX - ZREMRANGEBYRANK - ZREMRANGEBYSCORE - ZREVRANGE - ZREVRANGEBYLEX - ZREVRANGEBYSCORE - ZREVRANK - ZSCAN - ZSCORE -ZUNIONSTORE |
+#### String
+
+> [String](https://redis.io/commands/?group=string)
+
+- ✅ APPEND
+- ✅ DECR
+- ✅ DECRBY
+- ✅ GET
+- ✅ GETDEL
+- ✅ GETEX
+- ✅ GETRANGE
+- ✅ GETSET
+- ❌ LCS
+- ✅ INCR
+- ✅ INCRBY
+- ✅ INCRBYFLOAT
+- ✅ MGET
+- ✅ MSET
+- ✅ MSETNX
+- ✅ PSETEX
+- ✅ SET
+- ✅ SETEX
+- ✅ SETNX
+- ✅ SETRANGE
+- ✅ STRLEN
+- ❌ SUBSTR
+
+#### Bitmap
+
+> [Bitmap](https://redis.io/commands/?group=bitmap)
+
+- ✅ BITCOUNT
+- ✅ BITFIELD
+- ✅ BITFIELD_RO
+- ❌ BITPO
+- ✅ BITPOS
+- ✅ GETBIT
+- ✅ SETBIT
+
+#### Hash
+
+> [Hash](https://redis.io/commands/?group=hash)
+
+- ✅ HDEL
+- ✅ HEXISTS
+- ✅ HGET
+- ✅ HGETALL
+- ✅ HINCRBY
+- ✅ HINCRBYFLOAT
+- ✅ HKEYS
+- ✅ HLEN
+- ✅ HMGET
+- ✅ HMSET
+- ✅ HRANDFIELD
+- ✅ HSCAN
+- ✅ HSET
+- ✅ HSETNX
+- ✅ HSTRLEN
+- ✅ HVALS
+
+#### List
+
+> [List](https://redis.io/commands/?group=list)
+
+- ✅ BLMOVE
+- ❌ BLMPOP
+- ✅ BLPOP
+- ✅ BRPOP
+- ✅ BRPOPLPUSH
+- ✅ LINDEX
+- ✅ LINSERT
+- ✅ LLEN
+- ✅ LMOVE
+- ✅ LPOP
+- ✅ LPOS
+- ✅ LPUSH
+- ✅ LPUSHX
+- ✅ LRANGE
+- ✅ LREM
+- ✅ LSET
+- ✅ LTRIM
+- ✅ RPOP
+- ✅ RPOPLPUSH
+- ✅ RPUSH
+- ✅ RPUSHX
+
+#### Set
+
+> [Set](https://redis.io/commands/?group=set)
+
+- ✅ SADD
+- ✅ SCARD
+- ✅ SDIFF
+- ✅ SDIFFSTORE
+- ✅ SINTER
+- ✅ SINTERSTORE
+- ✅ SISMEMBER
+- ✅ SMEMBERS
+- ✅ SMISMEMBER
+- ✅ SMOVE
+- ✅ SPOP
+- ✅ SRANDMEMBER
+- ✅ SREM
+- ✅ SSCAN
+- ✅ SUNION
+- ✅ SUNIONSTORE
+- ❌ SINTERCARD
+
+#### Sorted Set
+
+> [Sorted Set](https://redis.io/commands/?group=sorted_set)
+
+- ❌ BZMPOP
+- ✅ BZPOPMAX
+- ✅ BZPOPMIN
+- ✅ ZADD
+- ✅ ZCARD
+- ✅ ZCOUNT
+- ❌ ZDIFF
+- ✅ ZDIFFSTORE
+- ✅ ZINCRBY
+- ❌ ZINTER
+- ❌ ZINTERCARD
+- ✅ ZINTERSTORE
+- ✅ ZLEXCOUNT
+- ❌ ZMPOP
+- ✅ ZMSCORE
+- ✅ ZPOPMAX
+- ✅ ZPOPMIN
+- ✅ ZRANDMEMBER
+- ✅ ZRANGE
+- ✅ ZRANGEBYLEX
+- ✅ ZRANGEBYSCORE
+- ✅ ZRANGESTORE
+- ✅ ZRANK
+- ✅ ZREM
+- ✅ ZREMRANGEBYLEX
+- ✅ ZREMRANGEBYRANK
+- ✅ ZREMRANGEBYSCORE
+- ✅ ZREVRANGE
+- ✅ ZREVRANGEBYLEX
+- ✅ ZREVRANGEBYSCORE
+- ✅ ZREVRANK
+- ✅ ZSCAN
+- ✅ ZSCORE
+- ❌ ZUNION
+- ✅ ZUNIONSTORE
 
 We run command integration tests from following Redis clients after each code change and also periodically:
 

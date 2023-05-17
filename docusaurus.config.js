@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const lightCodeTheme = require('prism-react-renderer/themes/vsLight')
+const darkCodeTheme = require('prism-react-renderer/themes/vsDark')
 
 const config = {
 	title: 'Montplex Docs',
@@ -49,10 +49,10 @@ const config = {
 		navbar: {
 			hideOnScroll: false,
 			title: 'Montplex',
-			logo: {
+			/* logo: {
 				alt: 'Montplex',
 				src: 'img/logo.svg',
-			},
+			}, */
 			items: [
 				{
 					type: 'docSidebar',

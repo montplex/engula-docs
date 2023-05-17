@@ -6,14 +6,153 @@ sidebar_position: 3
 
 Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示了支持的 Redis 命令列表：
 
-| 类型                                                      | 是否支持 | 支持的指令                                                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [String](https://redis.io/commands/?group=string)         | ✅       | APPEND - DECR - DECRBY - GET - GETBIT - GETDEL - GETEX - GETRANGE - GETSET - INCR - INCRBY - INCRBYFLOAT - MGET - MSET - MSETNX - PSETEX - SET - SETBIT - SETEX - SETNX - SETRANGE - STRLEN                                                                                                                                                                 |
-| [Bitmap](https://redis.io/commands/?group=bitmap)         | ✅       | BITCOUNT - BITFIELD - BITFIELD_RO - BITPOS                                                                                                                                                                                                                                                                                                                  |
-| [Hash](https://redis.io/commands/?group=hash)             | ✅       | HDEL - HEXISTS - HGET - HGETALL - HINCRBY - HINCRBYFLOAT - HKEYS - HLEN - HMGET - HMSET - HSCAN - HSET - HSETNX - HSTRLEN - HRANDFIELD - HVALS                                                                                                                                                                                                              |
-| [List](https://redis.io/commands/?group=list)             | ✅       | BLMOVE - BLPOP - BRPOP - BRPOPLPUSH - LINDEX - LINSERT - LLEN - LMOVE - LPOP - LPOS - LPUSH - LPUSHX - LRANGE - LREM - LSET - LTRIM - RPOP - RPOPLPUSH - RPUSH - RPUSHX                                                                                                                                                                                     |
-| [Set](https://redis.io/commands/?group=set)               | ✅       | SADD - SCARD - SDIFF - SDIFFSTORE - SINTER - SINTERSTORE - SISMEMBER - SMEMBERS - SMISMEMBER - SMOVE - SPOP - SRANDMEMBER - SREM - SSCAN - SUNION - SUNIONSTORE                                                                                                                                                                                             |
-| [Sorted Set](https://redis.io/commands/?group=sorted_set) | ✅       | BZPOPMAX - BZPOPMIN - ZADD - ZCARD - ZCOUNT - ZDIFFSTORE - ZINCRBY - ZINTERSTORE - ZLEXCOUNT - ZMSCORE - ZPOPMAX - ZPOPMIN - ZRANDMEMBER - ZRANGE - ZRANGESTORE - ZRANGEBYLEX - ZRANGEBYSCORE - ZRANK - ZREM - ZREMRANGEBYLEX - ZREMRANGEBYRANK - ZREMRANGEBYSCORE - ZREVRANGE - ZREVRANGEBYLEX - ZREVRANGEBYSCORE - ZREVRANK - ZSCAN - ZSCORE -ZUNIONSTORE |
+#### String
+
+> 官网参考文档: [String](https://redis.io/commands/?group=string)
+
+- ✅ APPEND
+- ✅ DECR
+- ✅ DECRBY
+- ✅ GET
+- ✅ GETDEL
+- ✅ GETEX
+- ✅ GETRANGE
+- ✅ GETSET
+- ❌ LCS
+- ✅ INCR
+- ✅ INCRBY
+- ✅ INCRBYFLOAT
+- ✅ MGET
+- ✅ MSET
+- ✅ MSETNX
+- ✅ PSETEX
+- ✅ SET
+- ✅ SETEX
+- ✅ SETNX
+- ✅ SETRANGE
+- ✅ STRLEN
+- ❌ SUBSTR
+
+#### Bitmap
+
+> 官网参考文档: [Bitmap](https://redis.io/commands/?group=bitmap)
+
+- ✅ BITCOUNT
+- ✅ BITFIELD
+- ✅ BITFIELD_RO
+- ❌ BITPO
+- ✅ BITPOS
+- ✅ GETBIT
+- ✅ SETBIT
+
+#### Hash
+
+> 官网参考文档: [Hash](https://redis.io/commands/?group=hash)
+
+- ✅ HDEL
+- ✅ HEXISTS
+- ✅ HGET
+- ✅ HGETALL
+- ✅ HINCRBY
+- ✅ HINCRBYFLOAT
+- ✅ HKEYS
+- ✅ HLEN
+- ✅ HMGET
+- ✅ HMSET
+- ✅ HRANDFIELD
+- ✅ HSCAN
+- ✅ HSET
+- ✅ HSETNX
+- ✅ HSTRLEN
+- ✅ HVALS
+
+#### List
+
+> 官网参考文档: [List](https://redis.io/commands/?group=list)
+
+- ✅ BLMOVE
+- ❌ BLMPOP
+- ✅ BLPOP
+- ✅ BRPOP
+- ✅ BRPOPLPUSH
+- ✅ LINDEX
+- ✅ LINSERT
+- ✅ LLEN
+- ✅ LMOVE
+- ✅ LPOP
+- ✅ LPOS
+- ✅ LPUSH
+- ✅ LPUSHX
+- ✅ LRANGE
+- ✅ LREM
+- ✅ LSET
+- ✅ LTRIM
+- ✅ RPOP
+- ✅ RPOPLPUSH
+- ✅ RPUSH
+- ✅ RPUSHX
+
+#### Set
+
+> 官网参考文档: [Set](https://redis.io/commands/?group=set)
+
+- ✅ SADD
+- ✅ SCARD
+- ✅ SDIFF
+- ✅ SDIFFSTORE
+- ✅ SINTER
+- ✅ SINTERSTORE
+- ✅ SISMEMBER
+- ✅ SMEMBERS
+- ✅ SMISMEMBER
+- ✅ SMOVE
+- ✅ SPOP
+- ✅ SRANDMEMBER
+- ✅ SREM
+- ✅ SSCAN
+- ✅ SUNION
+- ✅ SUNIONSTORE
+- ❌ SINTERCARD
+
+#### Sorted Set
+
+> 官网参考文档: [Sorted Set](https://redis.io/commands/?group=sorted_set)
+
+- ❌ BZMPOP
+- ✅ BZPOPMAX
+- ✅ BZPOPMIN
+- ✅ ZADD
+- ✅ ZCARD
+- ✅ ZCOUNT
+- ❌ ZDIFF
+- ✅ ZDIFFSTORE
+- ✅ ZINCRBY
+- ❌ ZINTER
+- ❌ ZINTERCARD
+- ✅ ZINTERSTORE
+- ✅ ZLEXCOUNT
+- ❌ ZMPOP
+- ✅ ZMSCORE
+- ✅ ZPOPMAX
+- ✅ ZPOPMIN
+- ✅ ZRANDMEMBER
+- ✅ ZRANGE
+- ✅ ZRANGEBYLEX
+- ✅ ZRANGEBYSCORE
+- ✅ ZRANGESTORE
+- ✅ ZRANK
+- ✅ ZREM
+- ✅ ZREMRANGEBYLEX
+- ✅ ZREMRANGEBYRANK
+- ✅ ZREMRANGEBYSCORE
+- ✅ ZREVRANGE
+- ✅ ZREVRANGEBYLEX
+- ✅ ZREVRANGEBYSCORE
+- ✅ ZREVRANK
+- ✅ ZSCAN
+- ✅ ZSCORE
+- ❌ ZUNION
+- ✅ ZUNIONSTORE
 
 每次代码更改后，我们都会定期从以下 Redis 客户端运行命令集成测试：
 
