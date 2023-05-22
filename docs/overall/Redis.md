@@ -22,7 +22,7 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ✅ INCR
 - ✅ INCRBY
 - ✅ INCRBYFLOAT
-- ❌  MGET
+- ❌ MGET
 - ❌ MSET
 - ❌ MSETNX
 - ✅ PSETEX
