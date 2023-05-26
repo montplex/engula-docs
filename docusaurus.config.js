@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark')
 const config = {
 	title: 'Montplex Docs',
 	tagline: 'Engula DataBase Docs',
-	favicon: 'img/favicon.ico',
+	favicon: 'img/favicon.svg',
 	url: 'https://dev.montplex.com',
 	baseUrl: '/docs',
 
@@ -49,10 +49,6 @@ const config = {
 		navbar: {
 			hideOnScroll: false,
 			title: 'Montplex',
-			/* logo: {
-				alt: 'Montplex',
-				src: 'img/logo.svg',
-			}, */
 			items: [
 				{
 					type: 'docSidebar',
