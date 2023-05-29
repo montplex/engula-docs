@@ -26,8 +26,10 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ❌ MSET
 - ❌ MSETNX
 - ✅ PSETEX
+- ✅ PTTL
 - ✅ SET
 - ✅ SETEX
+- ✅ TTL
 - ✅ SETNX
 - ✅ SETRANGE
 - ✅ STRLEN
@@ -57,8 +59,8 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ✅ HINCRBYFLOAT
 - ✅ HKEYS
 - ✅ HLEN
-- ❌ HMGET
-- ❌ HMSET
+- ✅ HMGET
+- ✅ HMSET
 - ✅ HRANDFIELD
 - ✅ HSCAN
 - ✅ HSET
@@ -70,15 +72,15 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 
 > [List](https://redis.io/commands/?group=list)
 
-- ✅ BLMOVE
+- ❌ BLMOVE
 - ❌ BLMPOP
 - ✅ BLPOP
 - ✅ BRPOP
-- ✅ BRPOPLPUSH
+- ❌ BRPOPLPUSH
 - ✅ LINDEX
 - ✅ LINSERT
 - ✅ LLEN
-- ✅ LMOVE
+- ❌ LMOVE
 - ✅ LPOP
 - ✅ LPOS
 - ✅ LPUSH
@@ -88,7 +90,7 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ✅ LSET
 - ✅ LTRIM
 - ✅ RPOP
-- ✅ RPOPLPUSH
+- ❌ RPOPLPUSH
 - ✅ RPUSH
 - ✅ RPUSHX
 
@@ -98,20 +100,20 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 
 - ✅ SADD
 - ✅ SCARD
-- ✅ SDIFF
-- ✅ SDIFFSTORE
-- ✅ SINTER
-- ✅ SINTERSTORE
+- ❌ SDIFF
+- ❌ SDIFFSTORE
+- ❌ SINTER
+- ❌ SINTERSTORE
 - ✅ SISMEMBER
 - ✅ SMEMBERS
 - ✅ SMISMEMBER
-- ✅ SMOVE
+- ❌ SMOVE
 - ✅ SPOP
 - ✅ SRANDMEMBER
 - ✅ SREM
 - ✅ SSCAN
-- ✅ SUNION
-- ✅ SUNIONSTORE
+- ❌ SUNION
+- ❌ SUNIONSTORE
 - ❌ SINTERCARD
 
 #### Sorted Set
@@ -125,11 +127,11 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ✅ ZCARD
 - ✅ ZCOUNT
 - ❌ ZDIFF
-- ✅ ZDIFFSTORE
+- ❌ ZDIFFSTORE
 - ✅ ZINCRBY
 - ❌ ZINTER
 - ❌ ZINTERCARD
-- ✅ ZINTERSTORE
+- ❌ ZINTERSTORE
 - ✅ ZLEXCOUNT
 - ❌ ZMPOP
 - ✅ ZMSCORE
@@ -152,7 +154,7 @@ Montplex supports Redis client protocol up to version `6.2`. Following table sho
 - ✅ ZSCAN
 - ✅ ZSCORE
 - ❌ ZUNION
-- ✅ ZUNIONSTORE
+- ❌ ZUNIONSTORE
 
 We run command integration tests from following Redis clients after each code change and also periodically:
 
