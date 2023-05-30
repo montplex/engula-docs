@@ -11,7 +11,7 @@ sidebar_position: 1
 
 ## Team
 
-You can contact to the team via support@montplex.com for technical support as well as questions and feedback.
+You can contact to the team via [support@montplex.com](mailto:support@montplex.com) for technical support as well as questions and feedback.
 
 
 ## Follow Us

@@ -11,7 +11,7 @@ sidebar_position: 1
 
 ## Team
 
-您可以通过 [support@upstash.com](support@upstash.com) 与团队联系，以获取技术支持以及问题和反馈。
+您可以通过 [support@montplex.com](mailto:support@montplex.com) 与团队联系，以获取技术支持以及问题和反馈。
 
 
 ## Follow Us
