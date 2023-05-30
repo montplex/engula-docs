@@ -22,12 +22,14 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ INCR
 - ✅ INCRBY
 - ✅ INCRBYFLOAT
-- ✅ MGET
-- ✅ MSET
-- ✅ MSETNX
+- ❌ MGET
+- ❌ MSET
+- ❌ MSETNX
 - ✅ PSETEX
+- ✅ PTTL
 - ✅ SET
 - ✅ SETEX
+- ✅ TTL
 - ✅ SETNX
 - ✅ SETRANGE
 - ✅ STRLEN
@@ -70,15 +72,15 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 
 > 官网参考文档: [List](https://redis.io/commands/?group=list)
 
-- ✅ BLMOVE
+- ❌ BLMOVE
 - ❌ BLMPOP
 - ✅ BLPOP
 - ✅ BRPOP
-- ✅ BRPOPLPUSH
+- ❌ BRPOPLPUSH
 - ✅ LINDEX
 - ✅ LINSERT
 - ✅ LLEN
-- ✅ LMOVE
+- ❌ LMOVE
 - ✅ LPOP
 - ✅ LPOS
 - ✅ LPUSH
@@ -88,7 +90,7 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ LSET
 - ✅ LTRIM
 - ✅ RPOP
-- ✅ RPOPLPUSH
+- ❌ RPOPLPUSH
 - ✅ RPUSH
 - ✅ RPUSHX
 
@@ -98,20 +100,20 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 
 - ✅ SADD
 - ✅ SCARD
-- ✅ SDIFF
-- ✅ SDIFFSTORE
-- ✅ SINTER
-- ✅ SINTERSTORE
+- ❌ SDIFF
+- ❌ SDIFFSTORE
+- ❌ SINTER
+- ❌ SINTERSTORE
 - ✅ SISMEMBER
 - ✅ SMEMBERS
 - ✅ SMISMEMBER
-- ✅ SMOVE
+- ❌ SMOVE
 - ✅ SPOP
 - ✅ SRANDMEMBER
 - ✅ SREM
 - ✅ SSCAN
-- ✅ SUNION
-- ✅ SUNIONSTORE
+- ❌ SUNION
+- ❌ SUNIONSTORE
 - ❌ SINTERCARD
 
 #### Sorted Set
@@ -125,11 +127,11 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ ZCARD
 - ✅ ZCOUNT
 - ❌ ZDIFF
-- ✅ ZDIFFSTORE
+- ❌ ZDIFFSTORE
 - ✅ ZINCRBY
 - ❌ ZINTER
 - ❌ ZINTERCARD
-- ✅ ZINTERSTORE
+- ❌ ZINTERSTORE
 - ✅ ZLEXCOUNT
 - ❌ ZMPOP
 - ✅ ZMSCORE
@@ -152,7 +154,7 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ ZSCAN
 - ✅ ZSCORE
 - ❌ ZUNION
-- ✅ ZUNIONSTORE
+- ❌ ZUNIONSTORE
 
 每次代码更改后，我们都会定期从以下 Redis 客户端运行命令集成测试：
 

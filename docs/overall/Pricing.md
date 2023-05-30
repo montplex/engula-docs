@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Limit
+# Limits
 
 | Feature                     | Start  | Pro       | Enterprise |
 | --------------------------- | ------ | --------- | ---------- |

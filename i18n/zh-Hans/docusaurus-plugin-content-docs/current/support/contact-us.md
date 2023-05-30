@@ -3,3 +3,20 @@ sidebar_position: 1
 ---
 
 # 服务和支持
+
+
+## Community
+
+您可以通过加入[我们的Discord](https://discord.gg/Y5HpjaEMre)服务器进行社区互动。
+
+## Team
+
+您可以通过 [support@upstash.com](support@upstash.com) 与团队联系，以获取技术支持以及问题和反馈。
+
+
+## Follow Us
+
+关注我们的 [twitter](https://twitter.com/MontplexDB). 
+
+
+
