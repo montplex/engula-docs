@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 服务和支持
+# 联系我们
 
 
 ## Community
