@@ -20,6 +20,17 @@ We do not access your information other than:
 
 :::
 
+## Verify Account
+
+At the same time as completing the registration, we will send the verification information to your email, and then you must pass the verification to activate your account.
+
+:::error
+You can still use and access your account, but you will not be able to create the caching service we provide unless you successfully verify your identity.
+:::
+
+![Fails](/docs/verify.png)
+
+
 ## Create a Cache Service
 
 Once you logged in, you can create a database by clicking on the plus sign at the top right corner.
