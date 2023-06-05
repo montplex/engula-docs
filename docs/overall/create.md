@@ -24,7 +24,7 @@ We do not access your information other than:
 
 At the same time as completing the registration, we will send the verification information to your email, and then you must pass the verification to activate your account.
 
-:::error
+:::caution
 You can still use and access your account, but you will not be able to create the caching service we provide unless you successfully verify your identity.
 :::
 
