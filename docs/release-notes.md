@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Release Notes
 
-This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 05, 2023.
+This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 03, 2023.
 
-## June 05, 2023
+## June 03, 2023
 
 ### Functionality Added or Changed
 
@@ -18,7 +18,7 @@ This document contains release notes for the changes in each release of Montplex
 
 - Fix the issue with email verification for username/password sign up on Auth0. After email verification, a bug was raised that prevented the creation of a cache.
 
-## May 01, 2023
+## May 27, 2023
 
 ### Functionality Added or Changed
 
