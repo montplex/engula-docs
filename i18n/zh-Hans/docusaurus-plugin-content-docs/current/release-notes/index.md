@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
 
-# Release Notes
+# 发行说明
 
 This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 03, 2023.
 

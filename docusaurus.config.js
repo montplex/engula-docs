@@ -57,7 +57,7 @@ const config = {
 					label: 'Docs',
 				},
 				{ to: '/blog', label: 'Blog', position: 'left' },
-				{ to: 'docs/contact-us', label: 'Contact Us', position: 'left' },
+				{ to: 'docs/contact', label: 'Contact Us', position: 'left' },
 				{
 					href: 'https://dev.montplex.com/',
 					label: 'Console',

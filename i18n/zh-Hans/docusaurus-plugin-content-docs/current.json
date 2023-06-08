@@ -11,8 +11,12 @@
     "message": "指南",
     "description": "The label for category How To in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Support": {
-    "message": "服务和支持",
+  "sidebar.tutorialSidebar.category.Contact Us": {
+    "message": "联系我们",
+    "description": "The label for category How To in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Release Notes": {
+    "message": "发行说明",
     "description": "The label for category How To in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.How To.link.generated-index.description": {

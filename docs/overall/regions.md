@@ -15,7 +15,7 @@ Montplex is committed to providing serverless caching solutions for users, Curre
 
 :::note
 
-Montplex plans to expand its support for additional cloud platforms and regions. If your project requires support for a specific cloud platform or region, Please click on the "[Contact Us](../support/contact-us.md)" button in the upper left corner to contact the Montplex team.
+Montplex plans to expand its support for additional cloud platforms and regions. If your project requires support for a specific cloud platform or region, Please click on the "[Contact Us](../contact)" button in the upper left corner to contact the Montplex team.
 
 :::
 

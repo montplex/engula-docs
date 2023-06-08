@@ -4,7 +4,6 @@ sidebar_position: 8
 
 # 联系我们
 
-
 ## Community
 
 您可以通过加入[我们的Discord](https://discord.gg/Y5HpjaEMre)服务器进行社区互动。
