@@ -4,7 +4,13 @@ sidebar_position: 0
 
 # Release Notes
 
-This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 03, 2023.
+This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 10, 2023.
+
+## June 10, 2023
+
+### Functionality Added or Changed
+
+- Implemented an account cost explorer that displays costs on a daily basis.
 
 ## June 03, 2023
 
