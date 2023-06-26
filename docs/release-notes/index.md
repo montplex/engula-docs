@@ -4,7 +4,13 @@ sidebar_position: 0
 
 # Release Notes
 
-This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 17, 2023.
+This document contains release notes for the changes in each release of Montplex Serverless Cache, up through June 25, 2023.
+
+## June 25, 2023
+
+### Functionality Added or Changed
+
+- Added support for the Beijing region on Aliyun.
 
 ## June 17, 2023
 
