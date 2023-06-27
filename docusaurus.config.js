@@ -10,8 +10,7 @@ const config = {
 	favicon: "img/montplex.ico",
 	url: "https://dev.montplex.com",
 	baseUrl: "/docs",
-
-	organizationName: "montplex",
+	organizationName: "Montplex",
 	projectName: "Montplex Docs",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
@@ -48,9 +47,9 @@ const config = {
 		image: "img/docusaurus-social-card.jpg",
 		navbar: {
 			hideOnScroll: false,
-			title: "Montplex",
+			title: "", // Montplex
 			logo: {
-				alt: "Montplex Logo",
+				alt: "montplex Logo",
 				src: "img/montplex.svg",
 			},
 			items: [
@@ -83,12 +82,12 @@ const config = {
 			darkTheme: darkCodeTheme,
 		},
 		// 设置侧边栏可折叠
-		docs: {
+	/* 	docs: {
 			sidebar: {
 				hideable: true,
 				autoCollapseCategories: true,
 			},
-		},
+		}, */
 	},
 };
 

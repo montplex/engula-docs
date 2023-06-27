@@ -1,19 +1,19 @@
 {
   "title": {
-    "message": "Montplex",
+    "message": "",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Montplex",
+    "message": "montplex logo",
     "description": "The alt text of navbar logo"
   },
   "item.label.Docs": {
     "message": "Docs",
-    "description": "Navbar item with label Docs"
+    "description": "Montpex Docs"
   },
   "item.label.Blog": {
     "message": "Blog",
-    "description": "Navbar item with label Blog"
+    "description": "Montpex Docs Blog"
   },
   "item.label.Contact Us": {
     "message": "Contact Us",
