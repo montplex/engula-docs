@@ -1,43 +1,43 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/vsLight')
-const darkCodeTheme = require('prism-react-renderer/themes/vsDark')
+const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
+const darkCodeTheme = require("prism-react-renderer/themes/vsDark");
 
 const config = {
-	title: 'Montplex Docs',
-	tagline: 'Engula DataBase Docs',
-	favicon: 'img/favicon.svg',
-	url: 'https://dev.montplex.com',
-	baseUrl: '/docs',
+	title: "Montplex Docs",
+	tagline: "Engula DataBase Docs",
+	favicon: "img/montplex.ico",
+	url: "https://dev.montplex.com",
+	baseUrl: "/docs",
 
-	organizationName: 'montplex',
-	projectName: 'Engula DataBase Docs',
-	onBrokenLinks: 'throw',
-	onBrokenMarkdownLinks: 'warn',
+	organizationName: "montplex",
+	projectName: "Montplex Docs",
+	onBrokenLinks: "throw",
+	onBrokenMarkdownLinks: "warn",
 	i18n: {
-		defaultLocale: 'en',
-		locales: ['en', 'zh-Hans'],
+		defaultLocale: "en",
+		locales: ["en", "zh-Hans"],
 		localeConfigs: {
 			en: {
-				htmlLang: 'en',
+				htmlLang: "en",
 			},
 		},
 	},
 
 	presets: [
 		[
-			'classic',
+			"classic",
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				docs: {
-					sidebarPath: require.resolve('./sidebars.js'),
+					sidebarPath: require.resolve("./sidebars.js"),
 				},
 				blog: {
 					showReadingTime: true,
 				},
 				theme: {
-					customCss: require.resolve('./src/css/custom.css'),
+					customCss: require.resolve("./src/css/custom.css"),
 				},
 			}),
 		],
@@ -45,32 +45,36 @@ const config = {
 
 	themeConfig: {
 		// Replace with your project's social card
-		image: 'img/docusaurus-social-card.jpg',
+		image: "img/docusaurus-social-card.jpg",
 		navbar: {
 			hideOnScroll: false,
-			title: 'Montplex',
+			title: "Montplex",
+			logo: {
+				alt: "Montplex Logo",
+				src: "img/montplex.svg",
+			},
 			items: [
 				{
-					type: 'docSidebar',
-					sidebarId: 'tutorialSidebar',
-					position: 'left',
-					label: 'Docs',
+					type: "docSidebar",
+					sidebarId: "tutorialSidebar",
+					position: "left",
+					label: "Docs",
 				},
-				{ to: '/blog', label: 'Blog', position: 'left' },
-				{ to: 'docs/contact', label: 'Contact Us', position: 'left' },
+				{ to: "/blog", label: "Blog", position: "left" },
+				{ to: "docs/contact", label: "Contact Us", position: "left" },
 				{
-					href: 'https://dev.montplex.com/',
-					label: 'Console',
-					position: 'right',
+					href: "https://dev.montplex.com/",
+					label: "Console",
+					position: "right",
 				},
 				{
-					type: 'localeDropdown',
-					position: 'right',
+					type: "localeDropdown",
+					position: "right",
 				},
 			],
 		},
 		colorMode: {
-			defaultMode: 'light',
+			defaultMode: "light",
 			disableSwitch: false,
 			respectPrefersColorScheme: true,
 		},
@@ -86,6 +90,6 @@ const config = {
 			},
 		},
 	},
-}
+};
 
-module.exports = config
+module.exports = config;
