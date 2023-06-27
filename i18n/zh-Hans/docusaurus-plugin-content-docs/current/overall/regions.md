@@ -13,7 +13,7 @@ Montplex 致力于为用户提供无服务器缓存解决方案，目前支持�
 | AWS US East (N. Virginia)    | us-east-1      |
 | AWS Asia Pacific (Singapore) | ap-southeast-1 |
 | AWS Asia Pacific (HongKong)  | ap-east-1      |
-
+| Alibaba Cloud North China 2 (Beijing)   | cn-beijing     |
 
 :::note
 <!-- ../howto/connect-your-client.mdx -->

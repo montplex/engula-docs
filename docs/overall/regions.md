@@ -11,6 +11,7 @@ Montplex is committed to providing serverless caching solutions for users, Curre
 | AWS US East (N. Virginia)    | us-east-1      |
 | AWS Asia Pacific (Singapore) | ap-southeast-1 |
 | AWS Asia Pacific (HongKong)  | ap-east-1      |
+| Alibaba Cloud North China 2 (Beijing)   | cn-beijing     |
 
 
 :::note
