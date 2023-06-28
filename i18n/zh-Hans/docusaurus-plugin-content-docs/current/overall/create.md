@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # 开始使用
 
-本篇介绍如何在 [Montplex](https://dev.montplex.com) 上创建数据库并将其与 Redis 客户端连接的步骤。
+本篇介绍如何在 [Montplex](https://www.montplex.com/) 上创建数据库并将其与 Redis 客户端连接的步骤。
 
 ## 创建帐户
 
-您可以使用您的邮箱、Github 或谷歌帐户注册 [Montplex](https://dev.montplex.com)。或者，如果您不想使用这些身份验证提供商，或者您想使用公司电子邮件地址注册，您可以使用电子邮件/密码注册进行注册。
+您可以使用您的邮箱、Github 或谷歌帐户注册 [Montplex](https://www.montplex.com/)。或者，如果您不想使用这些身份验证提供商，或者您想使用公司电子邮件地址注册，您可以使用电子邮件/密码注册进行注册。
 
 :::note
 

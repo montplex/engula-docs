@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Getting Started
 
-This page describes the steps on how to create a database on the [Montplex](https://dev.montplex.com) and connect it with a Redis client.
+This page describes the steps on how to create a database on the [Montplex](https://www.montplex.com/) and connect it with a Redis client.
 
 ## Create Account
 
-You can sign up to [Montplex](https://dev.montplex.com) using your Github or Google accounts. Alternatively you can sign up using email/password registration if you don't want to use these auth providers, or you want to sign up using a corporate email address.
+You can sign up to [Montplex](https://www.montplex.com/) using your Github or Google accounts. Alternatively you can sign up using email/password registration if you don't want to use these auth providers, or you want to sign up using a corporate email address.
 
 :::note
 

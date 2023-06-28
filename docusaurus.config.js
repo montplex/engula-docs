@@ -8,7 +8,7 @@ const config = {
 	title: "Montplex Docs",
 	tagline: "Engula DataBase Docs",
 	favicon: "img/montplex.ico",
-	url: "https://dev.montplex.com",
+	url: "https://www.montplex.com/",
 	baseUrl: "/docs",
 	organizationName: "Montplex",
 	projectName: "Montplex Docs",
