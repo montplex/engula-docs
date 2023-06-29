@@ -1,9 +1,27 @@
 ---
 slug: ServerlessCache
 title: The Future of Caching
-authors: [liaoyi]
 tags: []
 ---
+
+<head>
+		<title>The Future of Caching</title>
+    <link rel="canonical" href="https://www.montplex.com/docs/blog/ServerlessCache" />
+    <meta name="generator" content="Montplex: Serverless Cache for Global Business" />
+    <meta name="description" content="Montplex blog | The Future of Caching" />
+		<meta name="keywords" content="redis,serverless cache,blog" />
+		<meta property="og:title" content="Montplex blog" />
+		<meta property="og:description" content="Montplex blog" />
+		<meta property="og:site_name" content="Montplex blog | The Future of Caching" />
+		<meta property="og:image" content="https://www.montplex.com/docs/img/caching.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@MontplexDB" />
+		<meta name="twitter:creator" content="@MontplexDB" />
+		<meta name="twitter:title" content="The Future of Caching" />
+		<meta name="twitter:description" content="Serverless Cache Takes the Lead" />
+		<meta name="twitter:image" content="https://www.montplex.com/docs/img/caching.png" />
+</head>
+
 
 ##  Serverless Cache Takes the Lead
 
