@@ -6,50 +6,79 @@ sidebar_position: 3
 
 Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示了支持的 Redis 命令列表：
 
-#### String
 
-> 官网参考文档: [String](https://redis.io/commands/?group=string)
-
-- ✅ APPEND
-- ✅ DECR
-- ✅ DECRBY
-- ✅ GET
-- ✅ GETDEL
-- ✅ GETEX
-- ✅ GETRANGE
-- ✅ GETSET
-- ❌ LCS
-- ✅ INCR
-- ✅ INCRBY
-- ✅ INCRBYFLOAT
-- ❌ MGET
-- ❌ MSET
-- ❌ MSETNX
-- ✅ PSETEX
-- ✅ PTTL
-- ✅ SET
-- ✅ SETEX
-- ✅ TTL
-- ✅ SETNX
-- ✅ SETRANGE
-- ✅ STRLEN
-- ❌ SUBSTR
-
-#### Bitmap
-
-> 官网参考文档: [Bitmap](https://redis.io/commands/?group=bitmap)
+## Bitmap
 
 - ✅ BITCOUNT
 - ✅ BITFIELD
-- ✅ BITFIELD_RO
-- ❌ BITPO
+- ✅ BITOP
 - ✅ BITPOS
 - ✅ GETBIT
 - ✅ SETBIT
+- ❌ BITFIELD_RO
 
-#### Hash
+## Connection management
 
-> 官网参考文档: [Hash](https://redis.io/commands/?group=hash)
+- ✅ AUTH
+- ✅ CLIENT
+- ✅ ECHO
+- ✅ PING
+- ✅ QUIT
+- ✅ HELLO
+- ✅ SELECT
+- ❌ RESET
+## Cluster management
+
+- ✅ READONLY
+- ✅ ASKING
+- ✅ CLUSTER
+- ✅ READWRITE
+
+
+## Generic commands
+
+-  ✅ DEL 
+-  ✅ DUMP
+-  ✅ EXISTS 
+-  ✅ EXPIRE 
+-  ✅ EXPIREAT 
+-  ✅ KEYS 
+-  ✅ PERSIST 
+-  ✅ PEXPIRE 
+-  ✅ PEXPIREAT 
+-  ✅ PTTL 
+-  ✅ RANDOMKEY 
+-  ✅ RENAME 
+-  ✅ RENAMENX 
+-  ✅ RESTORE 
+-  ✅ SCAN 
+-  ✅ SORT 
+-  ✅ TOUCH 
+-  ✅ TTL 
+-  ✅ TYPE 
+-  ✅ UNLINK 
+-  ❌ COPY 
+-  ❌ EXPIRETIME 
+-  ❌ MIGRATE 
+-  ❌ MOVE 
+-  ❌ OBJECT 
+-  ❌ PEXPIRETIME 
+-  ❌ SORT_RO
+-  ❌ WAIT 
+-  ❌ WAITAOF 
+## Geospatial indices
+
+- ✅ GEOADD
+- ✅ GEODIST
+- ✅ GEOHASH
+- ✅ GEOPOS
+- ✅ GEORADIUS
+- ✅ GEORADIUSBYMEMBER
+- ✅ GEOSEARCH
+- ✅ GEOSEARCHSTORE
+- ❌ GEORADIUS_RO
+- ❌ GEORADIUSBYMEMBER_RO
+## Hash
 
 - ✅ HDEL
 - ✅ HEXISTS
@@ -59,28 +88,33 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ HINCRBYFLOAT
 - ✅ HKEYS
 - ✅ HLEN
+- ✅ HRANDFIELD
 - ✅ HMGET
 - ✅ HMSET
-- ✅ HRANDFIELD
 - ✅ HSCAN
 - ✅ HSET
 - ✅ HSETNX
 - ✅ HSTRLEN
 - ✅ HVALS
+## HyperLogLog
 
-#### List
+- ✅ PFADD
+- ✅ PFCOUNT
+- ✅ PFMERGE
+- ❌ PFDEBUG
+- ❌ PFSELFTEST
+## List
 
-> 官网参考文档: [List](https://redis.io/commands/?group=list)
-
-- ❌ BLMOVE
-- ❌ BLMPOP
+- ✅ BLMOVE
+- ✅ BLMPOP
 - ✅ BLPOP
 - ✅ BRPOP
-- ❌ BRPOPLPUSH
+- ✅ BRPOPLPUSH
 - ✅ LINDEX
 - ✅ LINSERT
 - ✅ LLEN
-- ❌ LMOVE
+- ✅ LMOVE
+- ✅ LMPOP
 - ✅ LPOP
 - ✅ LPOS
 - ✅ LPUSH
@@ -90,50 +124,98 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ LSET
 - ✅ LTRIM
 - ✅ RPOP
-- ❌ RPOPLPUSH
+- ✅ RPOPLPUSH
 - ✅ RPUSH
 - ✅ RPUSHX
 
-#### Set
+## Pub/Sub
+- ✅ PSUBSCRIBE
+- ✅ PUBLISH
+- ✅ PUBSUB
+- ✅ PUNSUBSCRIBE
+- ✅ SUBSCRIBE
+- ✅ UNSUBSCRIBE
+- ❌ SPUBLISH
+- ❌ SSUBSCRIBE
+- ❌ SUNSUBSCRIBE
 
-> 官网参考文档: [Set](https://redis.io/commands/?group=set)
 
+## Scripting and Functions
+- ✅ EVAL
+- ✅ EVAL_RO
+- ✅ EVALSHA
+- ✅ EVALSHA_RO
+- ✅ SCRIPT
+- ❌ FCALL
+- ❌ FCALL_RO
+- ❌ FUNCTION
+
+
+## Server managment
+- ✅ COMMAND
+- ✅ CONFIG
+- ✅ FLUSHALL
+- ✅ FLUSHDB
+- ✅ INFO
+- ❌ DBSIZE
+- ❌ LASTSAVE
+- ❌ MONITOR
+- ❌ SAVE
+- ❌ SHUTDOWN
+- ❌ SLAVEOF
+- ❌ SLOWLOG
+- ❌ SYNC
+- ❌ TIME
+- ❌ ACL
+- ❌ GREWRITEAOF
+- ❌ BGSAVE
+- ❌ FAILOVER
+- ❌ LATENCY
+- ❌ LOLWUT
+- ❌ MEMORY
+- ❌ MODULE
+- ❌ PSYNC
+- ❌ REPLCONF
+- ❌ REPLICAOF
+- ❌ RESTORE-ASKING
+- ❌ ROLE
+- ❌ SWAPDB
+
+
+## Set
 - ✅ SADD
 - ✅ SCARD
-- ❌ SDIFF
-- ❌ SDIFFSTORE
-- ❌ SINTER
-- ❌ SINTERSTORE
+- ✅ SDIFF
+- ✅ SDIFFSTORE
+- ✅ SINTER
+- ✅ SINTERSTORE
 - ✅ SISMEMBER
 - ✅ SMEMBERS
 - ✅ SMISMEMBER
-- ❌ SMOVE
+- ✅ SMOVE
 - ✅ SPOP
 - ✅ SRANDMEMBER
 - ✅ SREM
 - ✅ SSCAN
-- ❌ SUNION
-- ❌ SUNIONSTORE
+- ✅ SUNION
+- ✅ SUNIONSTORE
 - ❌ SINTERCARD
 
-#### Sorted Set
-
-> 官网参考文档: [Sorted Set](https://redis.io/commands/?group=sorted_set)
-
-- ❌ BZMPOP
-- ✅ BZPOPMAX
+## Sorted Set
+- ✅ BZMPOP
+- ✅ BZPOPMAX 
 - ✅ BZPOPMIN
 - ✅ ZADD
 - ✅ ZCARD
 - ✅ ZCOUNT
-- ❌ ZDIFF
-- ❌ ZDIFFSTORE
+- ✅ ZDIFF
+- ✅ ZDIFFSTORE
 - ✅ ZINCRBY
-- ❌ ZINTER
-- ❌ ZINTERCARD
-- ❌ ZINTERSTORE
+- ✅ ZINTER
+- ✅ ZINTERCARD
+- ✅ ZINTERSTORE
 - ✅ ZLEXCOUNT
-- ❌ ZMPOP
+- ✅ ZMPOP
 - ✅ ZMSCORE
 - ✅ ZPOPMAX
 - ✅ ZPOPMIN
@@ -153,8 +235,133 @@ Montplex 支持 Redis 客户端协议，最高支持 6.2 版本。下表显示�
 - ✅ ZREVRANK
 - ✅ ZSCAN
 - ✅ ZSCORE
-- ❌ ZUNION
-- ❌ ZUNIONSTORE
+- ✅ ZUNION
+- ✅ ZUNIONSTORE
+
+
+## Stream
+- ✅ XACK
+- ✅ XADD
+- ✅ XCLAIM
+- ✅ XDEL
+- ✅ XGROUP
+- ✅ XINFO
+- ✅ XLEN
+- ✅ XPENDING
+- ✅ XRANGE
+- ✅ XREAD
+- ✅ XREADGROUP
+- ✅ XREVRANGE
+- ✅ XTRIM
+- ❌ XAUTOCLAIM
+- ❌ XSETID
+
+
+## String
+- ✅ APPEND
+- ✅ DECR
+- ✅ DECRBY
+- ✅ GET
+- ✅ GETDEL
+- ✅ GETEX
+- ✅ GETRANGE
+- ✅ GETSET
+- ✅ INCR
+- ✅ INCRBY
+- ✅ INCRBYFLOAT
+- ✅ MGET
+- ✅ MSET
+- ✅ MSETNX
+- ✅ PSETEX
+- ✅ SET
+- ✅ SETEX
+- ✅ SETNX
+- ✅ SETRANGE
+- ✅ STRLEN
+- ✅ SUBSTR
+- ❌ LCS
+## Transactions
+
+- ✅ DISCARD
+- ✅ EXEC
+- ✅ MULTI
+- ✅ UNWATCH
+- ✅ WATCH
+
+
+## Bloom Filter
+- ✅ BF .ADD
+- ✅ BF .EXISTS
+- ✅ BF .INFO
+- ✅ BF .INSERT
+- ✅ BF .LOADCHUNK
+- ✅ BF .MADD
+- ✅ BF .MEXISTS
+- ✅ BF .SCANDUMP
+- ❌ BF .CARD
+- ❌ BF .RESERVE
+
+
+## JSON
+
+-  ✅ JSON.ARRAPPEND 
+-  ✅ JSON.ARRINDEX 
+-  ✅ JSON.ARRINSERT 
+-  ✅ JSON.ARRLEN 
+-  ✅ JSON.ARRPOP 
+-  ✅ JSON.ARRTRIM 
+-  ✅ JSON.CLEAR 
+-  ✅ JSON.DEL 
+-  ✅ JSON.FORGET 
+-  ✅ JSON.GET 
+-  ✅ JSON.MGET 
+-  ✅ SON.NUMINCRBY 
+-  ✅ JSON.NUMMULTBY 
+-  ✅ JSON.OBJKEYS 
+-  ✅ JSON.OBJLEN 
+-  ✅ JSON.RESP 
+-  ✅ JSON.SET 
+-  ✅ JSON.STRAPPEND 
+-  ✅ JSON.STRLEN 
+-  ✅ JSON.TOGGLE 
+-  ✅ JSON.TYPE 
+-  ❌ JSON.DEBUG 
+-  ❌ JSON.MERGE 
+-  ❌ JSON.MSET 
+
+
+## Search
+- ✅ FT .LIST
+- ✅ FT .AGGREGATE
+- ✅ FT .ALIASADD
+- ✅ FT .ALIASDEL
+- ✅ FT .ALIASUPDATE
+- ✅ FT .ALTER
+- ✅ FT .CONFIG
+- ✅ FT .CREATE
+- ✅ FT .CURSOR
+- ✅ FT .DICTADD
+- ✅ FT .DICTDEL
+- ✅ FT .DICTDUMP
+- ✅ FT .DROPINDEX
+- ✅ FT .EXPLAIN
+- ✅ FT .EXPLAINCLI
+- ✅ FT .INFO
+- ✅ FT .PROFILE
+- ✅ FT .SEARCH
+- ✅ FT .SPELLCHECK
+- ✅ FT .SYNDUMP
+- ✅ FT .SYNUPDATE
+- ✅ FT .TAGVALS
+
+
+## Other
+- ❌ CF
+- ❌ CMS
+- ❌ FS
+- ❌ TDIGEST
+- ❌ TS
+- ❌ TOPK
 
 每次代码更改后，我们都会定期从以下 Redis 客户端运行命令集成测试：
 
