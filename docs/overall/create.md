@@ -35,11 +35,11 @@ You can still use and access your account, but you will not be able to create th
 
 Once you logged in, you can create a database by clicking on the plus sign at the top right corner.
 
-![CacheService](/docs/create.png)
+![CacheService](/docs/01-create.png)
 
 Fill in basic information and create a cache.
 
-![CacheService](/docs/create-03.png)
+![CacheService](/docs/02-new-cache.png)
 
 After successful creation, a cache data will be added to the list.
 

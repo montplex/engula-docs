@@ -20,15 +20,21 @@ First, make sure that your source and destination redis are on the same VPC.
 And in order not to affect the stability of production business, it's best to prepare a separate EC2 instance. Then, test it. Ensure that the command allows you to connect to the remote Elasticache database successfully.
 
 SSH to this EC2 instance from your laptop:
-```
+
+```shell
 ssh -i “public key” <EC2 Instance>
 ```
+
 Install redis-cli on this new instance by running this command:
-```
+
+```shell
 sudo apt update
 sudo apt install -y redis-tools
 ```
+
 Use redis-cli to check connectivity with the source instance and the target instance:
-```
+
+```shell
 redis-cli -h <source host> -p 6379 -a <password>
 redis-cli -h <target host> -p 6379 -a <password>
+```

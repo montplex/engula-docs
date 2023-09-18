@@ -16,22 +16,27 @@ sidebar_position: 2
    You can run it on the command line or in a container
 ### Install   
 #### Linux
+
    Download the pre-compiled binary from the [releases page](https://github.com/redis-developer/riot/releases), uncompress and copy to the desired location.
 
    riot-standalone-3.1.5-*.zip includes its own Java runtime and does not require a Java installation.
-   ```
+
+   ```shell
    wget https://github.com/redis-developer/riot/releases/download/v3.1.5/riot-standalone-3.1.5-linux-x86_64.zip
 
    unzip riot-standalone-3.1.5-linux-x86_64.zip -d ~/riot
    cd ~/riot/riot-standalone-3.1.5-linux-x86_64
    ./bin/riot --help 
    ```
+
 #### macOS   
-   ```
+
+   ```shell
    brew install redis-developer/tap/riot
    ```   
 #### Docker   
-   ```
+
+   ```shell
    docker run fieldengineering/riot [OPTIONS] [COMMAND] 
    ```
    

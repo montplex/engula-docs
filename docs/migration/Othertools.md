@@ -17,7 +17,8 @@ It supports full migration of Alibaba Cloud Redis clusters, but incremental migr
 Download from Release: https://github.com/alibaba/RedisShake/releases
 
 ### Compile from source
-   ```
+
+   ``` shell
    apt install golang
    git clone https://github.com/alibaba/RedisShake
    cd RedisShake
@@ -25,7 +26,8 @@ Download from Release: https://github.com/alibaba/RedisShake/releases
    ```
 #### Problem
 If you make a build error such as this, you should download the binary package, or use an accessible proxy.
-```
+
+``` shell
 proxyconnect tcp: dial tcp 47.242.92.102:8788: i/o timeout
 ```
 
@@ -34,7 +36,8 @@ proxyconnect tcp: dial tcp 47.242.92.102:8788: i/o timeout
 ###   Edit sync.toml or restore.toml or scan.toml.
 
 vi scan.toml
-   ```
+
+   ``` json
    type = "scan"
 
 [source]
@@ -54,8 +57,9 @@ username = "" # keep empty if not using ACL
 password = "" # keep empty if no authentication is required
 tls = false
    ```
+
 ###   Start redis-shake.
-   ```
+   ``` shell
    ./bin/redis-shake redis-shake.toml
    # or
    ./bin/redis-shake restore.toml
@@ -63,6 +67,7 @@ tls = false
    ./bin/redis-shake scan.toml
    ```
 ## Other tools   
+
 ### Cloudcanal
 https://www.clougence.com/cc-doc/intro/product_intro
 ### Aliyun DTS

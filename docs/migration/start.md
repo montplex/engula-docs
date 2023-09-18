@@ -15,7 +15,8 @@ Replicate a Redis database into another Redis database.
 
 ## Quick Start
 Some basic parameters
-   ```
+
+   ``` shell
 riot replicate --help
 
 -h, --hostname
@@ -55,26 +56,32 @@ ds: Type-based Replication.
 ### Live Replication
 
 No password, not cluster, single db, and only perform a full migration once.  
-```
-#Command line
+
+``` shell
+# Command line
 ./riot -h <source host> -p <source port> replicate -h <target host> -p <target port>
 
-#Docker
+# Docker
 docker run fieldengineering/riot -h <source host> -p <source port> replicate -h <target host> -p <target port>
  ```
+
 Source host is the address where you want to migrate data from， The target is the endpoint of your Montplex Serverless cache instance.
 
 for examples:
-```
+
+```shell
 mdawmtawmdm4oa.engula-aliyun-cn-beijing.montplex.net
 ```
+
 The whole command:
-```
+
+```shell
 docker run fieldengineering/riot -h 172.31.0.22 -p 6379 -a testpwd replicate -h mdawmtawmdm4oa.engula-aliyun-cn-beijing.montplex.net -p 8125 -a <YOUR PASSWORD>
 ```
 
 Logs like this
-```
+
+```shell
 Listening  ? % [  =             ] 646642/? (0:25:00 / ?) 431.1/s | 19,165 queued
 Listening  ? % [ =              ] 650193/? (0:25:01 / ?) 433.2/s | 92,328 queued
 Listening  ? % [        =      ] 653393/? (0:25:02 / ?) 435.0/s | 172,395 queued
@@ -84,9 +91,10 @@ Listening  ? % [        =      ] 655043/? (0:25:04 / ?) 435.5/s | 304,991 queued
 
 With cluster, Full migration and real-time sync.
 
- ```
+ ``` shell
 docker run fieldengineering/riot -h <source host> -p <source port> -a <passwd> -c replicate --type ds -h <target host> -p <target port> -a <passwd> -c --mode live
 ```
+
 TIPS
 
 --mode live ,this mode, you must modify the config of your source redis first. 
@@ -98,9 +106,12 @@ In Amazon Cloud ElastiCache, refer to
 [Modify parameters of ElastiCache](https://docs.aws.amazon.com/zh_cn/AmazonElastiCache/latest/red-ug/ParameterGroups.Modifying.html)
 
 If the source redis is your self built instance, you can modify parameters as follows
-```
+
+```shell
 config set notify-keyspace-events KA
 ```
+
+
 ### Type-Based Replication   
 Sometimes the versions of the source and destination redis are inconsistent, or for other reasons such as: 
 
@@ -108,7 +119,8 @@ Sometimes the versions of the source and destination redis are inconsistent, or 
 2.   Incompatible DUMP formats between source and target (Redis 7.0).
 
 use the --type ds option, as follows:
-   ```
+
+   ```shell
    docker run fieldengineering/riot -h <source host> -p <source port> replicate --type ds -h <target host> -p <target port> --mode live
    ```
 
